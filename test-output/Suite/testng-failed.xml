@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="org.aajTak.utils.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Verify Article_SocialMeida_inHomePage(failed)">
+    <classes>
+      <class name="Runner.Article_SocialMeida_Verify_inHomePage">
+        <methods>
+          <include name="AT_App"/>
+        </methods>
+      </class> <!-- Runner.Article_SocialMeida_Verify_inHomePage -->
+    </classes>
+  </test> <!-- Verify Article_SocialMeida_inHomePage(failed) -->
+  <test thread-count="5" name="Verify Login(failed)">
+    <classes>
+      <class name="Runner.loginVerify">
+        <methods>
+          <include name="AT_App"/>
+        </methods>
+      </class> <!-- Runner.loginVerify -->
+    </classes>
+  </test> <!-- Verify Login(failed) -->
+</suite> <!-- Failed suite [Suite] -->

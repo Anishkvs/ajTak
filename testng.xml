@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+		<listener class-name="org.aajTak.utils.Listeners" />
+</listeners>
+	
+
+  <test name="Verify Article_SocialMeida_inHomePage">
+    <classes>
+      <class name="Runner.Article_SocialMeida_Verify_inHomePage">
+      </class>
+    </classes>
+  </test>
+    
+  <test name="Verify Bottom Menu">
+    <classes>
+      <class name="Runner.BottomMenuVerify"/>
+      </classes>
+  </test> 
+     
+  <test name="Verify Login">
+    <classes>
+      <class name="Runner.loginVerify"/>
+      </classes>
+  </test> 
+  
+  </suite> 
