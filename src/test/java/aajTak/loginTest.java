@@ -37,6 +37,8 @@ public class loginTest extends base{
 		launchPage launch = new launchPage(driver);
 		launch.launchapp();
 		launch.closeNewspreeso();
+		launch.closeNewspreeso();
+		launch.closeNewspreeso();
 		
 	}
 	public void login(HashMap<String, String > input) throws Exception {
