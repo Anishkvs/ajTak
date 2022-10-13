@@ -3,6 +3,7 @@ package Runner;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
+import org.aajTak.pageObjects.android.homePage;
 import org.aajTak.pageObjects.android.launchPage;
 import org.aajTak.pageObjects.android.loginPage;
 import org.testng.annotations.Test;
@@ -54,6 +55,21 @@ public class loginVerify2 extends base{
   // service.stop();
    
    }
+	
+public void login(HashMap<String, String > input) throws Exception {
+		
+		loginPage log = new loginPage(driver);
+		homePage home = new homePage(driver);
+		home.HamburgerId();
+		log.SignInProfile();
+		Thread.sleep(2000);
+		log.loginButton();
+		Thread.sleep(2000);
+		log.usernameFiled(input.get("name"));
+		log.passwordField(input.get("password"));
+		log.loginButton();
+				
+	}
 
 }
 

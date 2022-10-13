@@ -8,8 +8,12 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.aajTak.pageObjects.android.loginPage;
 import org.aajTak.utils.AndroidActions;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -20,6 +24,7 @@ public class base extends AndroidActions{
 	
 	
 	  public static AppiumDriverLocalService service;
+	  public loginPage log;
 	
 	  public AppiumDriverLocalService startServer() 
 	{
@@ -81,6 +86,7 @@ public class base extends AndroidActions{
 			cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 			AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			loginPage log = new loginPage(driver);
 			//
 	
 			    
@@ -89,7 +95,7 @@ public class base extends AndroidActions{
 			
 	
 	}
-
+		
 }
 
 

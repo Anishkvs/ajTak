@@ -1,6 +1,7 @@
 package aajTak;
 //HomePage scroll -- Article -- Social media
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.aajTak.pageObjects.android.ArticlePage;
 import org.aajTak.pageObjects.android.homePage;
@@ -16,7 +17,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import okio.Timeout;
 
-@Test
+@Test(groups= {"smoke"})
 public class Article_SocialMeida extends base{
 
 	AndroidDriver<AndroidElement>driver;
@@ -27,7 +28,8 @@ public class Article_SocialMeida extends base{
 	}
 	Swipes uti = new Swipes(driver);
 	
-	public void installApp() throws InterruptedException {
+	public void installApp() throws InterruptedException, IOException {
+		AndroidDriver<AndroidElement> driver=capabilities("ATNewApp");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		launchPage obj1 = new launchPage(driver);
 		obj1.launchapp();

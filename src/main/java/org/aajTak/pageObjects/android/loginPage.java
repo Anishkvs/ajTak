@@ -25,10 +25,10 @@ public class loginPage extends AndroidActions{
 	@AndroidFindBy(xpath="//android.widget.Button[@text='लॉग इन'] | //android.widget.Button[@resource-id='in.AajTak.headlines:id/btLoginSso']")
 	private WebElement loginButton;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[resource-id='in.AajTak.headlines:id/etLoginUsername']")
+	@AndroidFindBy(xpath="//android.widget.EditText[resource-id='in.AajTak.headlines:id/etLoginUsername'] | //android.widget.EditText[text='ईमेल/फोन']")
 	private WebElement userName;
 	
-	@AndroidFindBy(xpath="//android.widget.EditText[resource-id='in.AajTak.headlines:id/etPassword']")
+	@AndroidFindBy(xpath="//android.widget.EditText[resource-id='in.AajTak.headlines:id/etPassword'] | //android.widget.EditText[@text='पासवर्ड']")
 	private WebElement password;
 	
 	public void SignInProfile()

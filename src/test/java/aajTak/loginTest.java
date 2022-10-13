@@ -3,6 +3,8 @@ package aajTak;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.aajTak.pageObjects.android.homePage;
 import org.aajTak.pageObjects.android.launchPage;
 import org.aajTak.pageObjects.android.loginPage;
@@ -33,12 +35,13 @@ public class loginTest extends base{
 	@Test(dataProvider="getData")
 	
 	public void installApp() throws InterruptedException, IOException {
-		 
+		
 		launchPage launch = new launchPage(driver);
 		launch.launchapp();
 		launch.closeNewspreeso();
 		
 	}
+	@Test
 	public void login(HashMap<String, String > input) throws Exception {
 		
 		loginPage log = new loginPage(driver);
@@ -54,6 +57,9 @@ public class loginTest extends base{
 				
 	}
 	
+	
+	
+		
 	@DataProvider
 	public Object[][] getData() throws IOException
 	{

@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="org.aajTak.utils.Listeners"/>
-  </listeners>
-  <test thread-count="5" name="Verify Article_SocialMeida_inHomePage(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Runner.Article_SocialMeida_Verify_inHomePage">
+      <class name="Runner.loginVerify_pass">
         <methods>
-          <include name="AT_App"/>
+          <include name="persetload"/>
+          <include name="login" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- Runner.Article_SocialMeida_Verify_inHomePage -->
+      </class> <!-- Runner.loginVerify_pass -->
     </classes>
-  </test> <!-- Verify Article_SocialMeida_inHomePage(failed) -->
-  <test thread-count="5" name="Verify Login(failed)">
-    <classes>
-      <class name="Runner.loginVerify">
-        <methods>
-          <include name="AT_App"/>
-        </methods>
-      </class> <!-- Runner.loginVerify -->
-    </classes>
-  </test> <!-- Verify Login(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

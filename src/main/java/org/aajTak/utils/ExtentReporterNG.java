@@ -9,7 +9,7 @@ public class ExtentReporterNG {
 	public static ExtentReports getReporterObject()
 	{
 		//ExtentReports, ExtentSparkReporter
-		String path = System.getProperty("user.dir")+"\\reports\\index.html";
+		String path = System.getProperty("user.dir")+"//reports//index.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 		reporter.config().setReportName("Appium Automation report");
 		reporter.config().setDocumentTitle("Smoke test result");

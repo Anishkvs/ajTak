@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <groups>
+	<run>
+		<include name ="smoke"/>
+	</run>
+ </groups>
+
+<listeners>
+		<listener class-name="org.aajTak.utils.Listeners"/>
+</listeners>
+	
+
+  <test name="Verify Article_SocialMeida_inHomePage">
+    <classes>
+      <class name="Runner.Article_SocialMeida_Verify_inHomePage">
+      </class>
+    </classes>
+  </test>
+    
+
+  
+  </suite> 

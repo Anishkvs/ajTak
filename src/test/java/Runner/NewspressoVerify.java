@@ -3,12 +3,8 @@ package Runner;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.annotations.Test;
-
-import AT_Android.Article_SocialMeida;
-import AT_Android.Newspresso;
-import AT_Android.Setting_Page;
-import AT_Android.Notification_Hub;
 import AT_FrameWork.base;
+import aajTak.Newspresso;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
